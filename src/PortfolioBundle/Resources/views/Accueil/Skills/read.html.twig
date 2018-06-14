@@ -1,0 +1,25 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %} Competences {% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+    <h1 class="titleform">Competences</h1>
+    {% for item in skills %}
+        <div class="showblock">
+            <h3>Intitule</h3>
+        {{ item.entitled }}
+        </div>
+        <div class="showblock">
+            <h3>Descriptif</h3>
+            {{ item.descriptive }}
+        </div>
+        <div class="setDataForm">
+            <a class="bouton" href="{{ path('portfolio_education_create') }}">Ajouter</a>
+            <a class="bouton" href="{{ path('portfolio_education_update', {'educationId' : item.id}) }}">Modifier</a>
+            <a class="bouton" href="{{ path('portfolio_education_delete', {'educationId' : item.id}) }}">Supprimer</a>
+            <a class="bouton" href="{{ path('portfolio_contact_read') }}">Retour</a>
+        </div>
+    {% endfor %}
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Infos generales{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+            <h1 class="titleform">Etape - 1/6 - Infos generales</h1>
+            <div class="textAccueil">
+
+                {{ form_start(Contact_Type) }}
+                <div class="blocform">
+                <div class="item">
+
+                {{ form_widget(Contact_Type.name) }}
+                {{ form_errors(Contact_Type.name) }}
+                </div>
+
+                </div>
+                <hr>
+                <div class="blocform">
+
+                <div class="item">
+
+                {{ form_widget(Contact_Type.phone) }}
+                {{ form_errors(Contact_Type.phone) }}
+                </div>
+                </div>
+                <hr>
+                <div class="blocform">
+                <div class="item">
+
+                {{ form_widget(Contact_Type.street) }}
+                {{ form_errors(Contact_Type.street) }}
+                </div>
+                <div class="item">
+
+                {{ form_widget(Contact_Type.number) }}
+                {{ form_errors(Contact_Type.number) }}
+                </div>
+                <div class="item">
+
+                {{ form_widget(Contact_Type.locality) }}
+                {{ form_errors(Contact_Type.locality) }}
+                </div>
+                <div class="item">
+
+                {{ form_widget(Contact_Type.postal) }}
+                {{ form_errors(Contact_Type.postal) }}
+                </div>
+                <div class="item">
+
+                {{ form_widget(Contact_Type.country) }}
+                {{ form_errors(Contact_Type.country) }}
+                </div>
+                </div>
+                <hr>
+                <div class="item">
+                {{ form_widget(Contact_Type.save) }}
+                </div>
+
+                {{ form_end(Contact_Type) }}
+            </div>
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Compétences{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+            <h1 class="titleform">Etape - 5/6 - Competences</h1>
+            <div class="textAccueil">
+
+                {{ form_start(Skills_Type) }}
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Skills_Type.entitled) }}
+                        {{ form_errors(Skills_Type.entitled) }}
+                    </div>
+                    <div class="item">
+                        {{ form_widget(Skills_Type.descriptive) }}
+                        {{ form_errors(Skills_Type.descriptive) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="item">
+                    {{ form_widget(Skills_Type.save) }}
+                </div>
+                {{ form_end(Skills_Type) }}
+            </div>
+
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %} Vue d'ensemble {% endblock %}
+
+{% block fos_user_content %}
+            <div class="menu">
+                    <button id="stud" class="bouton">Etudes / Formation</button>
+                    <div class="sub_menu">
+                        <ul>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_education_read') }}">Consulter</a></li>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_education_create') }}">Créer / Ajouter</a></li>
+                        </ul>
+                    </div>
+
+                    <button id="exp" class="bouton">Experience pro</button>
+                    <div class="sub_menu2">
+                        <ul>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_activities_read') }}">Consulter</a></li>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_activities_create') }}">Créer / Ajouter</a></li>
+                        </ul>
+                    </div>
+
+                    <button id="ling" class="bouton">Connaissance linguistiques</button>
+                    <div class="sub_menu3">
+                        <ul>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_linguistic_read') }}">Consulter</a></li>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_linguistic_create') }}">Créer / Ajouter</a></li>
+                        </ul>
+                    </div>
+
+                    <button id="comp" class="bouton">Compétences</button>
+                    <div class="sub_menu4">
+                        <ul>
+                            <li><a class="bouton_sub" href="{{ path('portfolio_skills_read') }}">Consulter</a></li>
+                            <li><a class="bouton_sub" href="{{ path('portfolio_skills_create') }}">Créer / Ajouter</a></li>
+                        </ul>
+                    </div>
+
+                    <button id="hob" class="bouton">Loisirs</button>
+                    <div class="sub_menu5">
+                        <ul>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_hobbies_read') }}">Consulter</a></li>
+                        <li><a class="bouton_sub" href="{{ path('portfolio_hobbies_create') }}">Créer / Ajouter</a></li>
+                        </ul>
+                    </div>
+            </div>
+
+
+    <fieldset>
+            <h1 class="titleform">Infos generales</h1>
+        <div class="showblock">
+            <h3>Nom & Prenom</h3>
+        {{ contact.name }}
+        {{ contact.username }}
+        </div>
+        <div class="showblock">
+            <h3>Telephone</h3>
+        {{ contact.phone }}
+        </div>
+        <div class="showblock">
+            <h3>Email</h3>
+        {{ contact.email }}
+        </div>
+        <div class="showblock">
+            <h3>Adresse</h3>
+        {{ contact.street }}
+        {{ contact.number }}
+        {{ contact.postal }}
+        {{ contact.locality }}
+        {{ contact.country }}
+        </div>
+
+        <div class="setDataForm">
+        <a class="bouton" href="{{ path('portfolio_contact_update', {'contactId' : contact.id}) }}">Modifier</a>
+        <a class="bouton" href="{{ path('portfolio_contact_delete', {'contactId' : contact.id}) }}">Supprimer</a>
+        </div>
+    </fieldset>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Connaissances linguistiques - Modifier{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+        <div>
+            <h1 class="titleform">Modifier</h1>
+            {{ form_start(Linguistic_Type) }}
+            <div class="blocform">
+                <div class="item">
+                    {{ form_widget(Linguistic_Type.languages) }}
+                    {{ form_errors(Linguistic_Type.languages) }}
+                </div>
+            </div>
+            <hr>
+            <div class="blocform">
+                <div class="item">
+                    {{ form_widget(Linguistic_Type.level) }}
+                    {{ form_errors(Linguistic_Type.level) }}
+                </div>
+            </div>
+            <hr>
+            <div class="item">
+                {{ form_widget(Linguistic_Type.save) }}
+            </div>
+            {{ form_end(Linguistic_Type) }}
+        </div>
+    </fieldset>
+{% endblock %}

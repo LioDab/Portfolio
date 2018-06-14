@@ -1,0 +1,9 @@
+{% extends "PortfolioBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+
+    <fieldset>
+    {{ include('@FOSUser/Security/login_content.html.twig') }}
+    </fieldset>
+
+{% endblock fos_user_content %}

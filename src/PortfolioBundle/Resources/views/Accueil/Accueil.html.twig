@@ -1,0 +1,10 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block header %}{% endblock %}
+{% block fos_user_content%}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a class="startButton" href="{{ path('portfolio_contact_read') }}">Commencer </a>
+        {% else %}
+        <a class="startButton" href="{{ path('fos_user_security_login') }}">Se connecter</a>
+        {% endif %}
+{% endblock %}

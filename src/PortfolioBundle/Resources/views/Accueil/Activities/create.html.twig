@@ -1,0 +1,51 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Activitees professionnelles{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+            <h1 class="titleform">Etape - 3/6 -  Activitees professionnelles</h1>
+            <div class="textAccueil">
+
+                {{ form_start(Activities_Type) }}
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Activities_Type.profession) }}
+                        {{ form_errors(Activities_Type.profession) }}
+                    </div>
+                    <div class="item">
+                        {{ form_widget(Activities_Type.employer) }}
+                        {{ form_errors(Activities_Type.employer) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_label(Activities_Type.dateOfEntry) }}
+                        {{ form_widget(Activities_Type.dateOfEntry) }}
+                        {{ form_errors(Activities_Type.dateOfEntry) }}
+                    </div>
+                    <hr>
+                    <div class="item">
+                        {{ form_label(Activities_Type.endDate) }}
+                        {{ form_widget(Activities_Type.endDate) }}
+                        {{ form_errors(Activities_Type.endDate) }}
+                    </div>
+                </div>
+                    <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Activities_Type.tasks) }}
+                        {{ form_errors(Activities_Type.tasks) }}
+                    </div>
+                    </div>
+                <hr>
+
+                <div class="item">
+                    {{ form_widget(Activities_Type.save) }}
+                </div>
+
+                {{ form_end(Activities_Type) }}
+            </div>
+
+    </fieldset>
+{% endblock %}

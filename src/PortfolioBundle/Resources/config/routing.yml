@@ -1,0 +1,163 @@
+portfolio_index:
+    path:    /
+    defaults:
+      _controller: PortfolioBundle:Accueil:Accueil
+    methods: [ GET ]
+
+portfolio_contact_read:
+    path:    /contact/read
+    defaults:
+      _controller: PortfolioBundle:Contact:read
+    methods: [ GET ]
+
+portfolio_contact_create:
+    path:    /contact/create/{idUser}
+    defaults:
+      _controller: PortfolioBundle:Contact:create
+    methods: [ GET,POST ]
+
+portfolio_contact_update:
+    path:    /contact/update/{contactId}
+    defaults:
+      _controller: PortfolioBundle:Contact:update
+    requirements:
+     contactId : \d+
+    methods: [ GET,POST ]
+
+portfolio_contact_delete:
+    path:    /contact/delete/{contactId}
+    defaults:
+      _controller: PortfolioBundle:Contact:delete
+    requirements:
+      contactId : \d+
+    methods: [ GET ]
+
+portfolio_education_create:
+    path:    /education/create/
+    defaults:
+      _controller: PortfolioBundle:Education:create
+    methods: [ GET,POST ]
+
+portfolio_education_read:
+    path:    /education/read
+    defaults:
+      _controller: PortfolioBundle:Education:read
+    methods: [ GET ]
+
+portfolio_education_update:
+    path:    /education/update/{educationId}
+    defaults:
+      _controller: PortfolioBundle:Education:update
+    requirements:
+      educationId: \d+
+    methods: [ GET,POST ]
+
+portfolio_education_delete:
+    path:    /education/delete/{educationId}
+    defaults:
+      _controller: PortfolioBundle:Education:delete
+    requirements:
+      educationId: \d+
+    methods: [ GET ]
+
+portfolio_activities_create:
+    path:    /activities/create
+    defaults:
+      _controller: PortfolioBundle:Activities:create
+    methods: [ GET,POST ]
+
+portfolio_activities_read:
+    path:    /activities/read
+    defaults:
+      _controller: PortfolioBundle:Activities:read
+    methods: [ GET ]
+
+portfolio_activities_update:
+    path:    /activities/update/{activitiesId}
+    defaults:
+      _controller: PortfolioBundle:Activities:update
+    requirements:
+      activitiesId: \d+
+    methods: [ GET,POST ]
+
+portfolio_activities_delete:
+    path:    /activities/delete/{activitiesId}
+    defaults:
+      _controller: PortfolioBundle:Activities:delete
+    requirements:
+      activitiesId: \d+
+    methods: [ GET ]
+
+portfolio_linguistic_create:
+    path:    /linguistic/create
+    defaults:
+      _controller: PortfolioBundle:Linguistic:create
+    methods: [ GET,POST ]
+
+portfolio_linguistic_read:
+    path:    /linguistic/read
+    defaults:
+      _controller: PortfolioBundle:Linguistic:read
+    methods: [ GET ]
+
+portfolio_linguistic_update:
+    path:    /linguistic/update/{linguisticId}
+    defaults:
+      _controller: PortfolioBundle:Linguistic:update
+    requirements:
+      linguisticId: \d+
+    methods: [ GET,POST ]
+
+portfolio_linguistic_delete:
+    path:    /linguistic/delete/{linguisticId}
+    defaults:
+      _controller: PortfolioBundle:Linguistic:delete
+    requirements:
+      linguisticId: \d+
+    methods: [ GET ]
+
+portfolio_skills_create:
+    path:    /skills/create
+    defaults:
+      _controller: PortfolioBundle:Skills:create
+    methods: [ GET,POST ]
+
+portfolio_skills_read:
+    path:    /skils/read
+    defaults:
+      _controller: PortfolioBundle:Skills:read
+    methods: [ GET ]
+
+portfolio_skills_update:
+    path:    /skills/update/{skillsId}
+    defaults:
+      _controller: Po
+
+portfolio_hobbies_create:
+    path:    /hobbies/create
+    defaults:
+      _controller: PortfolioBundle:Hobbies:create
+    methods: [ GET,POST ]
+
+portfolio_hobbies_read:
+    path:    /hobbies/read
+    defaults:
+      _controller: PortfolioBundle:Hobbies:read
+    methods: [ GET ]
+
+portfolio_hobbies_update:
+    path:    /hobbies/read/{hobbiesId}
+    defaults:
+      _controller: PortfolioBundle:Hobbies:update
+    requirements:
+      hobbiesId: \d+
+    methods: [ GET,POST ]
+
+portfolio_hobbies_delete:
+    path:    /hobbies/delete/{hobbiesId}
+    defaults:
+      _controller: PortfolioBundle:Hobbies:delete
+    requirements:
+      hobbiesId: \d+
+    methods: [ GET ]
+

@@ -1,0 +1,174 @@
+body{
+    background-color: black;
+    background-image: url("../img/fond1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.bouton{
+    border:none;
+    margin:5px;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    color:#756950;
+    background-color: #fff8ee;
+    font-family: "Century Gothic";
+    font-size: 17px;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.bouton:hover{
+    opacity: 1;
+}
+.bouton_sub{
+    border:none;
+    margin:5px;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    color:#756950;
+    background-color: #fff8ee;
+    font-family: "Century Gothic";
+    font-size: 17px;
+    text-decoration: none;
+    opacity: 0.6;
+    width:80%;
+}
+
+.bouton_sub:hover{
+    opacity: 1;
+}
+
+.item{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+}
+.blocform{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.font_family_form
+{
+    font-family: "Century Gothic";
+    padding: 2px;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid silver;
+}
+.titleform
+{
+    text-align: center;
+    color:white;
+    font-family: "Century Gothic";
+    background-color: #6c6159;
+    box-shadow: 5px 5px 10px black;
+    width:80%;
+    padding: 10px;
+}
+.style_input
+{
+    text-align: center;
+    margin-top: 22px;
+    background: none;
+    border:none;
+    color: white;
+    font-family: "Century Gothic";
+}
+.showblock
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:80%;
+    text-align: center;
+}
+select
+{
+    background: transparent;
+    border: none;
+    color: white;
+}
+.setDataForm
+{
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+}
+.sub_menu{
+    display:none;
+    flex-wrap: wrap;
+ }
+.sub_menu2{
+    display: none;
+}
+.sub_menu3{
+    display: none;
+}
+.sub_menu4{
+    display: none;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    justify-content: center;
+}
+.startButton
+{
+    display: flex;
+    align-items: center;
+    margin-top: 250px;
+    font-family: "Century Gothic";
+    font-size: 45px;
+    text-align: center;
+    text-decoration: none;
+    color:silver;
+}
+.startButton:hover
+{
+    transform: scale(2);
+    border-bottom: 2px solid silver;
+    border-top: 2px solid silver;
+}
+#headerName
+{
+    color:white;
+    text-align: center;
+}
+fieldset{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 60%;
+    color:white;
+}
+label{
+    color: white;
+    font-family: "Century Gothic";
+}
+li{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+ul{
+    padding: 0;
+    margin-top: 0;
+}
+
+

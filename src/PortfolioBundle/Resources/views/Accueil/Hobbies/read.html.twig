@@ -1,0 +1,25 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %} Loisirs {% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+    <h1 class="titleform">Loisirs</h1>
+    {% for item in hobbies %}
+        <div class="showblock">
+            <h3>Intitule</h3>
+            {{ item.entitled }}
+        </div>
+        <div class="showblock">
+            <h3>Precision / Descriptif</h3>
+            {{ item.descriptive }}
+        </div>
+        <div class="setDataForm">
+            <a class="bouton" href="{{ path('portfolio_hobbies_create') }}">Ajouter</a>
+            <a class="bouton" href="{{ path('portfolio_hobbies_update', {'hobbiesId' : item.id}) }}">Modifier</a>
+            <a class="bouton" href="{{ path('portfolio_hobbies_delete', {'hobbiesId' : item.id}) }}">Supprimer</a>
+            <a class="bouton" href="{{ path('portfolio_contact_read') }}">Retour</a>
+        </div>
+    {% endfor %}
+    </fieldset>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block fos_user_content %}
+    <fieldset>
+    <h1 class="titleform">Activites profesionnelles</h1>
+    {% for item in activities %}
+        <div class="showblock">
+            <h3>Profession</h3>
+            {{ item.profession }}
+        </div>
+        <div class="showblock">
+            <h3>Taches effectuees</h3>
+            {{ item.tasks }}
+        </div>
+        <div class="showblock">
+            <h3>Employeur</h3>
+            {{ item.employer }}
+        </div>
+        <div class="showblock">
+            <h3>De</h3>
+            {{ item.dateOfEntry.format('d-m-y')}}
+        </div>
+        <div class="showblock">
+            <h3>Jusqu'a</h3>
+            {{ item.endDate.format('d-m-y') }}
+        </div>
+
+    <div class="setDataForm">
+        <a class="bouton" href="{{ path('portfolio_activities_create') }}">Ajouter</a>
+        <a class="bouton" href="{{ path('portfolio_activities_update',{'activitiesId':item.id}) }}">Modifier</a>
+        <a class="bouton" href="{{ path('portfolio_activities_delete',{'activitiesId':item.id}) }}">Supprimer</a>
+        <a class="bouton" href="{{ path('portfolio_contact_read') }}">Retour</a>
+    </div>
+    {% endfor %}
+    </fieldset>
+{% endblock %}

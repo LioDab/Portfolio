@@ -1,0 +1,27 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Connaissances linguistiques{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+    <h1 class="titleform">Connaissances linguistiques</h1>
+
+    {% for item in linguistic %}
+        <div class="showblock">
+            <h3>Langue</h3>
+        {{ item.languages }}
+        </div>
+        <div class="showblock">
+            <h3>Niveau</h3>
+            {{ item.level }}
+        </div>
+        <div class="setDataForm">
+            <a class="bouton" href="{{ path('portfolio_linguistic_create') }}">Ajouter</a>
+            <a class="bouton" href="{{ path('portfolio_linguistic_update', {'linguisticId' : item.id}) }}">Modifier</a>
+            <a class="bouton" href="{{ path('portfolio_linguistic_delete', {'linguisticId' : item.id}) }}">Supprimer</a>
+            <a class="bouton" href="{{ path('portfolio_contact_read') }}">Retour</a>
+        </div>
+    {% endfor %}
+
+    </fieldset>
+{% endblock %}

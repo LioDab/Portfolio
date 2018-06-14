@@ -1,0 +1,9 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block fos_user_content %}
+    <div class="showBlocForm">
+    <fieldset>
+    {% include "@FOSUser/Registration/register_content.html.twig" %}
+    </fieldset>
+    </div>
+{% endblock fos_user_content %}

@@ -1,0 +1,40 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Etudes - Formations{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+            <h1 class="titleform">Etape - 2/6 - Etudes / Formations</h1>
+                {{ form_start(Education_Type) }}
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Education_Type.subjectsStudied) }}
+                        {{ form_errors(Education_Type.subjectsStudied) }}
+                    </div>
+                    <div class="item">
+                        {{ form_widget(Education_Type.institute) }}
+                        {{ form_errors(Education_Type.institute) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_label(Education_Type.dateStart) }}
+                        {{ form_widget(Education_Type.dateStart) }}
+                        {{ form_errors(Education_Type.dateStart) }}
+                    </div>
+                    <hr>
+                    <div class="item">
+                        {{ form_label(Education_Type.endDate) }}
+                        {{ form_widget(Education_Type.endDate) }}
+                        {{ form_errors(Education_Type.endDate) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="item">
+                    {{ form_widget(Education_Type.save) }}
+                </div>
+                {{ form_end(Education_Type) }}
+
+    </fieldset>
+{% endblock %}

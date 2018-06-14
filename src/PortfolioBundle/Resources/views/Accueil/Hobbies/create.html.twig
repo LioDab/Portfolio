@@ -1,0 +1,28 @@
+{% extends '@Portfolio/layout.html.twig' %}
+
+{% block title %}Loisirs{% endblock %}
+
+{% block fos_user_content %}
+    <fieldset>
+            <h1 class="titleform">Etape - 6/6 - Loisirs</h1>
+                {{ form_start(Hobbies_Type) }}
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Hobbies_Type.entitled) }}
+                        {{ form_errors(Hobbies_Type.entitled) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="blocform">
+                    <div class="item">
+                        {{ form_widget(Hobbies_Type.descriptive) }}
+                        {{ form_errors(Hobbies_Type.descriptive) }}
+                    </div>
+                </div>
+                <hr>
+                <div class="item">
+                    {{ form_widget(Hobbies_Type.save) }}
+                </div>
+                {{ form_end(Hobbies_Type) }}
+    </fieldset>
+{% endblock %}
